@@ -24,25 +24,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		630718342DAD95DF00EEFBC5 /* MuteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		630718342DAD95DF00EEFBC5 /* SoundSnooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundSnooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		630718422DAD95E100EEFBC5 /* SoundSnoozeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundSnoozeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6307184C2DAD95E100EEFBC5 /* SoundSnoozeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundSnoozeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		630718362DAD95DF00EEFBC5 /* MuteMe */ = {
+		630718362DAD95DF00EEFBC5 /* SoundSnooze */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MuteMe;
+			path = SoundSnooze;
 			sourceTree = "<group>";
 		};
-		630718452DAD95E100EEFBC5 /* MuteMeTests */ = {
+		630718452DAD95E100EEFBC5 /* SoundSnoozeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MuteMeTests;
+			path = SoundSnoozeTests;
 			sourceTree = "<group>";
 		};
-		6307184F2DAD95E100EEFBC5 /* MuteMeUITests */ = {
+		6307184F2DAD95E100EEFBC5 /* SoundSnoozeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MuteMeUITests;
+			path = SoundSnoozeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		6307182B2DAD95DF00EEFBC5 = {
 			isa = PBXGroup;
 			children = (
-				630718362DAD95DF00EEFBC5 /* MuteMe */,
-				630718452DAD95E100EEFBC5 /* MuteMeTests */,
-				6307184F2DAD95E100EEFBC5 /* MuteMeUITests */,
+				630718362DAD95DF00EEFBC5 /* SoundSnooze */,
+				630718452DAD95E100EEFBC5 /* SoundSnoozeTests */,
+				6307184F2DAD95E100EEFBC5 /* SoundSnoozeUITests */,
 				630718352DAD95DF00EEFBC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		630718352DAD95DF00EEFBC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				630718342DAD95DF00EEFBC5 /* MuteMe.app */,
-				630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */,
-				6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */,
+				630718342DAD95DF00EEFBC5 /* SoundSnooze.app */,
+				630718422DAD95E100EEFBC5 /* SoundSnoozeTests.xctest */,
+				6307184C2DAD95E100EEFBC5 /* SoundSnoozeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		630718332DAD95DF00EEFBC5 /* MuteMe */ = {
+		630718332DAD95DF00EEFBC5 /* SoundSnooze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMe" */;
+			buildConfigurationList = 630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnooze" */;
 			buildPhases = (
 				630718302DAD95DF00EEFBC5 /* Sources */,
 				630718312DAD95DF00EEFBC5 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				630718362DAD95DF00EEFBC5 /* MuteMe */,
+				630718362DAD95DF00EEFBC5 /* SoundSnooze */,
 			);
-			name = MuteMe;
+			name = SoundSnooze;
 			packageProductDependencies = (
 			);
 			productName = MuteMe;
-			productReference = 630718342DAD95DF00EEFBC5 /* MuteMe.app */;
+			productReference = 630718342DAD95DF00EEFBC5 /* SoundSnooze.app */;
 			productType = "com.apple.product-type.application";
 		};
-		630718412DAD95E100EEFBC5 /* MuteMeTests */ = {
+		630718412DAD95E100EEFBC5 /* SoundSnoozeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeTests" */;
+			buildConfigurationList = 630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnoozeTests" */;
 			buildPhases = (
 				6307183E2DAD95E100EEFBC5 /* Sources */,
 				6307183F2DAD95E100EEFBC5 /* Frameworks */,
@@ -131,18 +131,18 @@
 				630718442DAD95E100EEFBC5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				630718452DAD95E100EEFBC5 /* MuteMeTests */,
+				630718452DAD95E100EEFBC5 /* SoundSnoozeTests */,
 			);
-			name = MuteMeTests;
+			name = SoundSnoozeTests;
 			packageProductDependencies = (
 			);
 			productName = MuteMeTests;
-			productReference = 630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */;
+			productReference = 630718422DAD95E100EEFBC5 /* SoundSnoozeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6307184B2DAD95E100EEFBC5 /* MuteMeUITests */ = {
+		6307184B2DAD95E100EEFBC5 /* SoundSnoozeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeUITests" */;
+			buildConfigurationList = 6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnoozeUITests" */;
 			buildPhases = (
 				630718482DAD95E100EEFBC5 /* Sources */,
 				630718492DAD95E100EEFBC5 /* Frameworks */,
@@ -154,13 +154,13 @@
 				6307184E2DAD95E100EEFBC5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				6307184F2DAD95E100EEFBC5 /* MuteMeUITests */,
+				6307184F2DAD95E100EEFBC5 /* SoundSnoozeUITests */,
 			);
-			name = MuteMeUITests;
+			name = SoundSnoozeUITests;
 			packageProductDependencies = (
 			);
 			productName = MuteMeUITests;
-			productReference = 6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */;
+			productReference = 6307184C2DAD95E100EEFBC5 /* SoundSnoozeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "MuteMe" */;
+			buildConfigurationList = 6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "SoundSnooze" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				630718332DAD95DF00EEFBC5 /* MuteMe */,
-				630718412DAD95E100EEFBC5 /* MuteMeTests */,
-				6307184B2DAD95E100EEFBC5 /* MuteMeUITests */,
+				630718332DAD95DF00EEFBC5 /* SoundSnooze */,
+				630718412DAD95E100EEFBC5 /* SoundSnoozeTests */,
+				6307184B2DAD95E100EEFBC5 /* SoundSnoozeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		630718442DAD95E100EEFBC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 630718332DAD95DF00EEFBC5 /* MuteMe */;
+			target = 630718332DAD95DF00EEFBC5 /* SoundSnooze */;
 			targetProxy = 630718432DAD95E100EEFBC5 /* PBXContainerItemProxy */;
 		};
 		6307184E2DAD95E100EEFBC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 630718332DAD95DF00EEFBC5 /* MuteMe */;
+			target = 630718332DAD95DF00EEFBC5 /* SoundSnooze */;
 			targetProxy = 6307184D2DAD95E100EEFBC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -394,7 +394,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MuteMe/MuteMe.entitlements;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = SoundSnooze/SoundSnooze.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -408,7 +409,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMe;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.SoundSnooze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -421,7 +422,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MuteMe/MuteMe.entitlements;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = SoundSnooze/SoundSnooze.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -435,7 +437,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMe;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.SoundSnooze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -457,7 +459,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuteMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuteMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundSnooze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundSnooze";
 			};
 			name = Debug;
 		};
@@ -475,7 +477,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuteMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuteMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundSnooze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundSnooze";
 			};
 			name = Release;
 		};
@@ -514,7 +516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "MuteMe" */ = {
+		6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "SoundSnooze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				630718542DAD95E100EEFBC5 /* Debug */,
@@ -523,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMe" */ = {
+		630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnooze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				630718572DAD95E100EEFBC5 /* Debug */,
@@ -532,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeTests" */ = {
+		630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnoozeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6307185A2DAD95E100EEFBC5 /* Debug */,
@@ -541,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeUITests" */ = {
+		6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "SoundSnoozeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6307185D2DAD95E100EEFBC5 /* Debug */,
