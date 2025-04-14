@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		630718432DAD95E100EEFBC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6307182C2DAD95DF00EEFBC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630718332DAD95DF00EEFBC5;
+			remoteInfo = MuteMe;
+		};
+		6307184D2DAD95E100EEFBC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6307182C2DAD95DF00EEFBC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630718332DAD95DF00EEFBC5;
+			remoteInfo = MuteMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		630718342DAD95DF00EEFBC5 /* MuteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		630718362DAD95DF00EEFBC5 /* MuteMe */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MuteMe;
+			sourceTree = "<group>";
+		};
+		630718452DAD95E100EEFBC5 /* MuteMeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MuteMeTests;
+			sourceTree = "<group>";
+		};
+		6307184F2DAD95E100EEFBC5 /* MuteMeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MuteMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		630718312DAD95DF00EEFBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6307183F2DAD95E100EEFBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630718492DAD95E100EEFBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6307182B2DAD95DF00EEFBC5 = {
+			isa = PBXGroup;
+			children = (
+				630718362DAD95DF00EEFBC5 /* MuteMe */,
+				630718452DAD95E100EEFBC5 /* MuteMeTests */,
+				6307184F2DAD95E100EEFBC5 /* MuteMeUITests */,
+				630718352DAD95DF00EEFBC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		630718352DAD95DF00EEFBC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				630718342DAD95DF00EEFBC5 /* MuteMe.app */,
+				630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */,
+				6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		630718332DAD95DF00EEFBC5 /* MuteMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMe" */;
+			buildPhases = (
+				630718302DAD95DF00EEFBC5 /* Sources */,
+				630718312DAD95DF00EEFBC5 /* Frameworks */,
+				630718322DAD95DF00EEFBC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				630718362DAD95DF00EEFBC5 /* MuteMe */,
+			);
+			name = MuteMe;
+			packageProductDependencies = (
+			);
+			productName = MuteMe;
+			productReference = 630718342DAD95DF00EEFBC5 /* MuteMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		630718412DAD95E100EEFBC5 /* MuteMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeTests" */;
+			buildPhases = (
+				6307183E2DAD95E100EEFBC5 /* Sources */,
+				6307183F2DAD95E100EEFBC5 /* Frameworks */,
+				630718402DAD95E100EEFBC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				630718442DAD95E100EEFBC5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				630718452DAD95E100EEFBC5 /* MuteMeTests */,
+			);
+			name = MuteMeTests;
+			packageProductDependencies = (
+			);
+			productName = MuteMeTests;
+			productReference = 630718422DAD95E100EEFBC5 /* MuteMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6307184B2DAD95E100EEFBC5 /* MuteMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeUITests" */;
+			buildPhases = (
+				630718482DAD95E100EEFBC5 /* Sources */,
+				630718492DAD95E100EEFBC5 /* Frameworks */,
+				6307184A2DAD95E100EEFBC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6307184E2DAD95E100EEFBC5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6307184F2DAD95E100EEFBC5 /* MuteMeUITests */,
+			);
+			name = MuteMeUITests;
+			packageProductDependencies = (
+			);
+			productName = MuteMeUITests;
+			productReference = 6307184C2DAD95E100EEFBC5 /* MuteMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6307182C2DAD95DF00EEFBC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					630718332DAD95DF00EEFBC5 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					630718412DAD95E100EEFBC5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 630718332DAD95DF00EEFBC5;
+					};
+					6307184B2DAD95E100EEFBC5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 630718332DAD95DF00EEFBC5;
+					};
+				};
+			};
+			buildConfigurationList = 6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "MuteMe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6307182B2DAD95DF00EEFBC5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 630718352DAD95DF00EEFBC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				630718332DAD95DF00EEFBC5 /* MuteMe */,
+				630718412DAD95E100EEFBC5 /* MuteMeTests */,
+				6307184B2DAD95E100EEFBC5 /* MuteMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		630718322DAD95DF00EEFBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630718402DAD95E100EEFBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6307184A2DAD95E100EEFBC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		630718302DAD95DF00EEFBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6307183E2DAD95E100EEFBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630718482DAD95E100EEFBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		630718442DAD95E100EEFBC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630718332DAD95DF00EEFBC5 /* MuteMe */;
+			targetProxy = 630718432DAD95E100EEFBC5 /* PBXContainerItemProxy */;
+		};
+		6307184E2DAD95E100EEFBC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630718332DAD95DF00EEFBC5 /* MuteMe */;
+			targetProxy = 6307184D2DAD95E100EEFBC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		630718542DAD95E100EEFBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		630718552DAD95E100EEFBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B2469T42RM;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		630718572DAD95E100EEFBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuteMe/MuteMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		630718582DAD95E100EEFBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuteMe/MuteMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6307185A2DAD95E100EEFBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuteMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuteMe";
+			};
+			name = Debug;
+		};
+		6307185B2DAD95E100EEFBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuteMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuteMe";
+			};
+			name = Release;
+		};
+		6307185D2DAD95E100EEFBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MuteMe;
+			};
+			name = Debug;
+		};
+		6307185E2DAD95E100EEFBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2469T42RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.taylorlabs.MuteMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MuteMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6307182F2DAD95DF00EEFBC5 /* Build configuration list for PBXProject "MuteMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630718542DAD95E100EEFBC5 /* Debug */,
+				630718552DAD95E100EEFBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630718562DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630718572DAD95E100EEFBC5 /* Debug */,
+				630718582DAD95E100EEFBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630718592DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6307185A2DAD95E100EEFBC5 /* Debug */,
+				6307185B2DAD95E100EEFBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6307185C2DAD95E100EEFBC5 /* Build configuration list for PBXNativeTarget "MuteMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6307185D2DAD95E100EEFBC5 /* Debug */,
+				6307185E2DAD95E100EEFBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6307182C2DAD95DF00EEFBC5 /* Project object */;
+}
