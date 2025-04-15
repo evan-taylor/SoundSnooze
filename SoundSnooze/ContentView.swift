@@ -18,8 +18,8 @@ struct ContentView: View {
                     VStack(spacing: 0) {
                         HStack {
                             Button(action: { showSettings = false }) {
-                                Image(systemName: "chevron.left")
-                                    .imageScale(.large)
+                                Text("←")
+                                    .font(.system(size: 18))
                                     .foregroundColor(.accentColor)
                                     .padding(8)
                             }
@@ -44,12 +44,24 @@ struct ContentView: View {
                     .padding(.top, 6)
                 Spacer()
                 Button(action: { showSettings = true }) {
-                    Image(systemName: "gearshape")
-                        .imageScale(.large)
-                        .foregroundColor(.secondary)
-                        .padding(10)
-                        .background(Color(nsColor: .systemGray).opacity(0.7))
-                        .clipShape(Circle())
+                    ZStack {
+                        // Background circle with gradient similar to AnimatedMuteIcon
+                        Circle()
+                            .fill(LinearGradient(
+                                gradient: Gradient(colors: [Color.accentColor.opacity(0.18), Color.clear]),
+                                startPoint: .top,
+                                endPoint: .bottom
+                            ))
+                            .frame(width: 40, height: 40)
+                            .blur(radius: 1)
+                        
+                        // Emoji with slight shadow for depth
+                        Text("⚙️")
+                            .font(.system(size: 18))
+                            .shadow(color: Color.accentColor.opacity(0.3), radius: 3, x: 0, y: 1)
+                    }
+                    .frame(width: 40, height: 40)
+                    .contentShape(Circle())
                 }
                 .buttonStyle(PlainButtonStyle())
             }
@@ -86,7 +98,7 @@ struct ContentView: View {
 
         ScrollView {
             VStack(alignment: .leading, spacing: 6) {
-                ForEach(manager.events.prefix(5)) { event in
+                ForEach(manager.events.prefix(10)) { event in
                     HStack {
                         Text(event.type.rawValue)
                             .font(.caption)
@@ -106,9 +118,29 @@ struct ContentView: View {
                 }
             }
         }
-        .frame(height: 70)
-
-        Spacer(minLength: 8)
+        // Removed fixed height to allow expansion
+        .layoutPriority(1)
+        
+        Spacer()
+        
+        Divider()
+        
+        // Quit button at the very bottom of the main view
+        HStack {
+            Spacer()
+            Button(action: {
+                NSApplication.shared.terminate(nil)
+            }) {
+                HStack(spacing: 6) {
+                    Image(systemName: "power")
+                    Text("Quit SoundSnooze")
+                }
+                .foregroundColor(.red.opacity(0.8))
+            }
+            .buttonStyle(PlainButtonStyle())
+            .padding(.vertical, 8)
+            Spacer()
+        }
     }
     .frame(width: 320, height: 340)
 }
@@ -200,7 +232,7 @@ struct SettingsView: View {
                     }
                 }) {
                     HStack(spacing: 6) {
-                        Image(systemName: "envelope")
+                        Text("✉️")
                         Text("Send Feedback")
                     }
                 }

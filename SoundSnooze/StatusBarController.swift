@@ -6,22 +6,23 @@ import os.log
 class StatusBarController: NSObject {
     // Logger for debugging and monitoring
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.taylorlabs.SoundSnooze", category: "StatusBarController")
-    private var statusBar: NSStatusBar
-    private var statusItem: NSStatusItem
+    
+    // Strong reference to the status item to prevent it from being deallocated
+    private var statusItem: NSStatusItem!
     private var popover: NSPopover
     private var notificationObserver: NSObjectProtocol?
 
     init(_ popover: NSPopover) {
-        self.statusBar = NSStatusBar.system
-        self.statusItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         self.popover = popover
-        
         super.init()
         
+        // Create status item with fixed length
+        statusItem = NSStatusBar.system.statusItem(withLength: 24)
         setupStatusItem()
         setupNotificationObservers()
         
         logger.debug("StatusBarController initialized")
+        print("StatusBarController initialized")
     }
     
     deinit {
@@ -35,34 +36,45 @@ class StatusBarController: NSObject {
     private func setupStatusItem() {
         guard let button = statusItem.button else {
             logger.error("Failed to access status item button")
+            print("Failed to access status item button")
             return
         }
         
-        // Set default appearance for the status item
-        button.title = ""
-        button.imagePosition = .imageOnly
+        // Fallback to simple text that always works
+        button.title = "🔊"
         
-        // Configure the status item button with initial icon
-        updateStatusBarIcon(isMuted: false)
-        
-        // Set up primary action for left-click
+        // Set up action for click to show/hide popover
         button.target = self
         button.action = #selector(togglePopover(_:))
         
-        // Create a menu for secondary (right) click
-        let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Quit SoundSnooze", action: #selector(quitApp), keyEquivalent: "q"))
-        
-        // Set this controller as the menu delegate
-        menu.delegate = self
-        
-        // Store the menu for later, but don't assign it to statusItem.menu yet
-        // (we'll do that in menuWillOpen and remove it in menuDidClose)
-        statusItem.button?.menu = menu
-        
         // Add accessibility
         button.setAccessibilityLabel("SoundSnooze")
-        button.setAccessibilityHelp("Click to show/hide SoundSnooze controls, right-click for menu")
+        button.setAccessibilityHelp("Click to show/hide SoundSnooze controls")
+        
+        logger.debug("Status item setup completed")
+        print("Status item setup completed")
+    }
+    
+    /// Refreshes the status item to ensure it's visible in the menu bar
+    func refreshStatusItem() {
+        // Re-create the status item if needed
+        if statusItem == nil {
+            statusItem = NSStatusBar.system.statusItem(withLength: 24)
+            setupStatusItem()
+        }
+        
+        // Force update the icon
+        guard let button = statusItem.button else { return }
+        
+        // Temporarily change the icon and then change it back to force a refresh
+        let currentTitle = button.title
+        button.title = ""
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            button.title = currentTitle
+        }
+        
+        logger.debug("Status item refreshed")
+        print("Status item refreshed")
     }
     
     private func setupNotificationObservers() {
@@ -83,40 +95,22 @@ class StatusBarController: NSObject {
     private func updateStatusBarIcon(isMuted: Bool) {
         guard let button = statusItem.button else {
             logger.error("Failed to access status item button for icon update")
+            print("Failed to access status item button for icon update")
             return
         }
         
-        // Use appropriate SF Symbol based on mute state without the circle background
-        let symbolName = isMuted ? "speaker.slash.fill" : "speaker.wave.2.fill"
-        let accessibilityLabel = isMuted ? "Sound is muted" : "Sound is active"
-        
-        // Create a properly configured image with different size configurations for each icon type
-        // to ensure they appear visually balanced
-        let config: NSImage.SymbolConfiguration
-        if isMuted {
-            // The slash variant needs to be slightly larger to match visually
-            config = NSImage.SymbolConfiguration(pointSize: 17, weight: .medium)
-        } else {
-            // The wave variant can be slightly smaller since it has more visual weight
-            config = NSImage.SymbolConfiguration(pointSize: 15.5, weight: .medium)
-        }
-        
-        // Create the base image with symbol configuration
-        if let image = NSImage(systemSymbolName: symbolName, accessibilityDescription: accessibilityLabel)?.withSymbolConfiguration(config) {
-            image.isTemplate = true
-    button.image = image
-    button.title = ""
-    button.imagePosition = .imageOnly
-        } else {
-            logger.error("Failed to create status bar icon image")
-        }
+        // Use emoji icons which are more reliable than SF Symbols
+        button.title = isMuted ? "🔇" : "🔊"
         
         // Update accessibility
         button.setAccessibilityLabel("SoundSnooze: \(isMuted ? "Muted" : "Listening")")
         
         logger.debug("Status bar icon updated to \(isMuted ? "muted" : "unmuted") state")
+        print("Status bar icon updated to \(isMuted ? "muted" : "unmuted") state")
     }
 
+
+    
     @objc func togglePopover(_ sender: AnyObject?) {
         // This method directly toggles the popover (for left-clicks)
         if popover.isShown {
@@ -129,10 +123,12 @@ class StatusBarController: NSObject {
     func showPopover(_ sender: AnyObject?) {
         guard let button = statusItem.button else {
             logger.error("Failed to access status item button for popover")
+            print("Failed to access status item button for popover")
             return
         }
         
         logger.debug("Opening popover")
+        print("Opening popover")
         popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
         
         // Make sure the popover becomes key to receive keyboard events
@@ -146,24 +142,11 @@ class StatusBarController: NSObject {
     
     func closePopover(_ sender: AnyObject?) {
         logger.debug("Closing popover")
+        print("Closing popover")
         popover.performClose(sender)
     }
     
 
-    
-    @objc func quitApp() {
-        logger.info("User initiated app quit")
-        NSApp.terminate(nil)
-    }
 }
 
-// MARK: - NSMenuDelegate
-extension StatusBarController: NSMenuDelegate {
-    func menuWillOpen(_ menu: NSMenu) {
-        // When the menu is about to open, we know it's a right-click
-        // If popover is shown, close it
-        if popover.isShown {
-            closePopover(nil)
-        }
-    }
-}
+

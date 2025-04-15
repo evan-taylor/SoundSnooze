@@ -32,10 +32,9 @@ struct AnimatedMuteIcon: View {
                 .frame(width: AnimationConstants.circleSize, height: AnimationConstants.circleSize)
                 .blur(radius: AnimationConstants.blurRadius)
             
-            // Icon with animation
-            Image(systemName: isMuted ? "speaker.slash.fill" : "speaker.wave.2.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            // Emoji icon with animation
+            Text(isMuted ? "🔇" : "🔊")
+                .font(.system(size: AnimationConstants.iconSize))
                 .frame(width: AnimationConstants.iconSize, height: AnimationConstants.iconSize)
                 .foregroundColor(isMuted ? .red : .accentColor)
                 .shadow(color: isMuted ? Color.red.opacity(0.2) : Color.accentColor.opacity(0.4), radius: 7, x: 0, y: 2)
