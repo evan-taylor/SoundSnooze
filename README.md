@@ -41,7 +41,10 @@ If you find it useful, consider [supporting development with a small donation](h
 ## System Requirements
 
 - macOS Monterey (12.0) or later
-- Compatible with both Intel and Apple Silicon Macs
+
+> ⚠ Note: SoundSnooze has only been tested on an M3 MacBook. I haven’t had the chance to test it on other Mac models or chipsets yet.  
+If you try it on a different machine and it works (or doesn’t), I’d love to hear from you!
+
 
 ## Technical Details
 
