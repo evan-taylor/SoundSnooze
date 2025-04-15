@@ -38,7 +38,11 @@ class StatusBarController: NSObject {
             return
         }
         
-        // Configure the status item button
+        // Set default appearance for the status item
+        button.title = ""
+        button.imagePosition = .imageOnly
+        
+        // Configure the status item button with initial icon
         updateStatusBarIcon(isMuted: false)
         
         // Set up primary action for left-click
@@ -82,21 +86,30 @@ class StatusBarController: NSObject {
             return
         }
         
-        // Use appropriate SF Symbol based on mute state
-        let symbolName = isMuted ? "speaker.slash.circle.fill" : "speaker.wave.2.circle.fill"
+        // Use appropriate SF Symbol based on mute state without the circle background
+        let symbolName = isMuted ? "speaker.slash.fill" : "speaker.wave.2.fill"
         let accessibilityLabel = isMuted ? "Sound is muted" : "Sound is active"
         
-        // Create a properly configured image
-        let config = NSImage.SymbolConfiguration(pointSize: 18, weight: .bold)
+        // Create a properly configured image with different size configurations for each icon type
+        // to ensure they appear visually balanced
+        let config: NSImage.SymbolConfiguration
+        if isMuted {
+            // The slash variant needs to be slightly larger to match visually
+            config = NSImage.SymbolConfiguration(pointSize: 17, weight: .medium)
+        } else {
+            // The wave variant can be slightly smaller since it has more visual weight
+            config = NSImage.SymbolConfiguration(pointSize: 15.5, weight: .medium)
+        }
+        
+        // Create the base image with symbol configuration
         if let image = NSImage(systemSymbolName: symbolName, accessibilityDescription: accessibilityLabel)?.withSymbolConfiguration(config) {
-            image.isTemplate = true // Ensures automatic adaptation for light/dark mode
-            button.image = image
+            image.isTemplate = true
+    button.image = image
+    button.title = ""
+    button.imagePosition = .imageOnly
         } else {
             logger.error("Failed to create status bar icon image")
         }
-        
-        // Set appropriate color based on state with better contrast
-        button.contentTintColor = isMuted ? NSColor.systemRed : NSColor.controlAccentColor
         
         // Update accessibility
         button.setAccessibilityLabel("SoundSnooze: \(isMuted ? "Muted" : "Listening")")
