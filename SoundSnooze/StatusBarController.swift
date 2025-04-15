@@ -11,6 +11,7 @@ class StatusBarController: NSObject {
     private var statusItem: NSStatusItem!
     private var popover: NSPopover
     private var notificationObserver: NSObjectProtocol?
+    private var eventMonitor: EventMonitor?
 
     init(_ popover: NSPopover) {
         self.popover = popover
@@ -20,6 +21,7 @@ class StatusBarController: NSObject {
         statusItem = NSStatusBar.system.statusItem(withLength: 24)
         setupStatusItem()
         setupNotificationObservers()
+        setupEventMonitor()
         
         logger.debug("StatusBarController initialized")
         print("StatusBarController initialized")
@@ -30,6 +32,10 @@ class StatusBarController: NSObject {
         if let observer = notificationObserver {
             NotificationCenter.default.removeObserver(observer)
         }
+        
+        // Stop the event monitor
+        eventMonitor?.stop()
+        
         logger.debug("StatusBarController deinitialized")
     }
     
@@ -138,15 +144,70 @@ class StatusBarController: NSObject {
         if let firstResponder = popover.contentViewController?.view.window?.initialFirstResponder {
             firstResponder.becomeFirstResponder()
         }
+        
+        // Start monitoring events when popover is shown
+        eventMonitor?.start()
     }
     
     func closePopover(_ sender: AnyObject?) {
         logger.debug("Closing popover")
         print("Closing popover")
         popover.performClose(sender)
+        
+        // Stop monitoring events when popover is closed
+        eventMonitor?.stop()
     }
     
 
+    private func setupEventMonitor() {
+        // Create event monitor to detect clicks outside the popover
+        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+            guard let self = self, self.popover.isShown else { return }
+            
+            // Check if the click is outside the popover
+            if event != nil {
+                let mouseLocation = NSEvent.mouseLocation
+                
+                // Get the popover window
+                guard let popoverWindow = self.popover.contentViewController?.view.window else { return }
+                
+                // Convert screen point to window coordinates
+                let windowPoint = popoverWindow.convertPoint(fromScreen: mouseLocation)
+                
+                // Check if the click is outside the popover's content view
+                if !NSPointInRect(windowPoint, popoverWindow.contentView?.frame ?? .zero) {
+                    self.closePopover(nil)
+                }
+            }
+        }
+    }
 }
 
-
+// Helper class to monitor mouse events
+class EventMonitor {
+    private var monitor: Any?
+    private let mask: NSEvent.EventTypeMask
+    private let handler: (NSEvent?) -> Void
+    
+    init(mask: NSEvent.EventTypeMask, handler: @escaping (NSEvent?) -> Void) {
+        self.mask = mask
+        self.handler = handler
+    }
+    
+    deinit {
+        stop()
+    }
+    
+    func start() {
+        // Start monitoring global mouse events
+        monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler)
+    }
+    
+    func stop() {
+        // Stop monitoring if active
+        if monitor != nil {
+            NSEvent.removeMonitor(monitor!)
+            monitor = nil
+        }
+    }
+}
