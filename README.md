@@ -1,6 +1,8 @@
 # SoundSnooze
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-ffdd00?style=flat-square)](https://buymeacoffee.com/evan.taylor)
+<a href="https://www.buymeacoffee.com/evan.taylor" target="_blank">
+  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
+</a>
 
 **SoundSnooze** is a free, lightweight macOS utility that automatically mutes your Mac when you lock the screen, put it to sleep, shut down, or disconnect your headphones — and restores your volume when you return.
 
